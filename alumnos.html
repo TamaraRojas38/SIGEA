@@ -12,16 +12,20 @@
 
     <nav>
         <a href="index.html">Inicio</a>
+        <a href="login.html">Usuario</a>
         <a href="alumnos.html">Alumnos</a>
         <a href="docentes.html">Docentes</a>
+        <a href="materias.html">Materias</a>
+        <a href="cursos.html">Cursos</a>
+        <a href="calificaciones.html">Calificaciones</a>
         <a href="contacto.html">Contacto</a>
-        <a href="login.html">Usuario</a>
+        
     </nav>
 </header>
 
 <section>
 
-<h2>Registrar Alumno</h2>
+<h2>Nuevo Alumno</h2>
 
 <form id="formAlumno">
 
@@ -34,7 +38,25 @@
     <label>DNI</label>
     <input type="number" id="dni" required>
 
+    <label>Curso</label>
+    <input type="number" id="curso" required>
+    <select>
+        <option>1° Año</option>
+        <option>2° Año</option>
+        <option>3° Año</option>
+        <option>4° Año</option>
+        <option>5° Año</option>
+    </select>
+
+
+    <label>Telefono</label>
+    <input type="number" id="telefono" required>
+
     <button type="submit">Guardar</button>
+
+    <button type="submit">Modificar</button>
+
+    <button type="submit">Eliminar</button>
 
 </form>
 
