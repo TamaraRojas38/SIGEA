@@ -2,13 +2,13 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Sistema de Gestión Escolar</title>
+    <title>Usuario</title>
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 
 <header>
-    <h1>Sistema de Gestión Escolar ACA</h1>
+    <h1>Inicio de Sesión</h1>
 
     <nav>
         <a href="index.html">Inicio</a>
@@ -20,19 +20,22 @@
 </header>
 
 <section>
-    <h2>Bienvenidos</h2>
 
-    <p>
-        Este sistema permite administrar alumnos, docentes y usuarios
-        de la institución educativa.
-    </p>
+<form id="formLogin">
 
-    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png" width="200">
+    <label>Usuario</label>
+    <input type="text" id="usuario">
+
+    <label>Contraseña</label>
+    <input type="password" id="password">
+
+    <button type="submit">Ingresar</button>
+
+</form>
+
 </section>
 
-<footer>
-    <p>© 2026 Sistema de Gestión Escolar</p>
-</footer>
+<script src="js/app.js"></script>
 
 </body>
 </html>

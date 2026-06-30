@@ -2,13 +2,13 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Sistema de Gestión Escolar</title>
+    <title>Docentes</title>
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 
 <header>
-    <h1>Sistema de Gestión Escolar ACA</h1>
+    <h1>Gestión de Docentes</h1>
 
     <nav>
         <a href="index.html">Inicio</a>
@@ -20,19 +20,28 @@
 </header>
 
 <section>
-    <h2>Bienvenidos</h2>
 
-    <p>
-        Este sistema permite administrar alumnos, docentes y usuarios
-        de la institución educativa.
-    </p>
+<h2>Registrar Docente</h2>
 
-    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png" width="200">
+<form id="formDocente">
+
+    <label>Nombre</label>
+    <input type="text" id="nombreDocente" required>
+
+    <label>Materia</label>
+    <input type="text" id="materia" required>
+
+    <button type="submit">Guardar</button>
+
+</form>
+
+<h2>Listado de Docentes</h2>
+
+<ul id="listaDocentes"></ul>
+
 </section>
 
-<footer>
-    <p>© 2026 Sistema de Gestión Escolar</p>
-</footer>
+<script src="js/app.js"></script>
 
 </body>
 </html>
