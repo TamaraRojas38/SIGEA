@@ -5,7 +5,7 @@ body{
 }
 
 header{
-    background:#0d6efd;
+    background:#801c4c;
     color:white;
     text-align:center;
     padding:20px;
@@ -38,7 +38,7 @@ input{
 }
 
 button{
-    background:#0d6efd;
+    background:#c12872;
     color:white;
     border:none;
     padding:10px 20px;
@@ -74,4 +74,13 @@ header{
 
 .logo{
     width:100px;
+}
+
+.bienvenida{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: calc(100vh - 250px);
 }
