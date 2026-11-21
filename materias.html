@@ -1,9 +1,13 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Gestión de Materias</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Materias - SIGEA</title>
+
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/bot.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
@@ -13,42 +17,49 @@
         <i class="fa-solid fa-chalkboard"></i>
         Gestión de Materias
     </h1>
-    <nav>
-        <a href="index.html">Inicio</a>
-        <a href="login.html">Usuario</a>
-        <a href="alumnos.html">Alumnos</a>
-        <a href="docentes.html">Docentes</a>
-        <a href="materias.html">Materias</a>
-        <a href="curso.html">Curso</a>
-        <a href="calificaciones.html">Calificaciones</a>
-        
-        
-    </nav>
+
+   <nav>
+    <a href="index.html">Inicio</a>
+    <a href="login.html">Usuario</a>
+    <a href="alumnos.html">Alumnos</a>
+    <a href="docentes.html">Docentes</a>
+    <a href="materias.html">Materias</a>
+    <a href="curso.html">Curso</a>
+    <a href="calificaciones.html">Calificaciones</a>
+    <a href="asistencias.html">Asistencias</a>
+    <a href="reportes.html">Reportes</a>
+</nav>
 </header>
 
 <main>
+    <section>
+        <h2>Registrar Materia</h2>
+
+        <form id="formMateria">
+            <label for="nombreMateria">Nombre de la materia:</label>
+            <input type="text" id="nombreMateria" required>
+
+            <label for="cursoMateria">Curso:</label>
+            <input type="text" id="cursoMateria" required>
+
+            <label for="profesorMateria">Profesor:</label>
+            <input type="text" id="profesorMateria" required>
+
+            <button type="submit">Guardar</button>
+            <button type="button" id="btnModificar">Modificar</button>
+            <button type="button" id="btnEliminar">Eliminar</button>
+            <button type="button" id="btnLimpiar">Limpiar</button>
+        </form>
+    </section>
 
     <section>
-<h2>Registrar Materia</h2>
-
-<form>
-    <label>Nombre de la materia:</label>
-    <input type="text">
-
-    <label>Curso:</label>
-    <input type="text">
-
-    <label>Profesor:</label>
-    <input type="text">
-
-    <button type="submit">Guardar</button>
-    <button type="submit">Modificar</button>
-    <button type="submit">Eliminar</button>
-</form>
-
-</section>
-
+        <h2>Listado de Materias</h2>
+        <ul id="listaMaterias"></ul>
+    </section>
 </main>
+
+<script src="js/app.js"></script>
+<script src="js/bot.js"></script>
 
 </body>
 </html>

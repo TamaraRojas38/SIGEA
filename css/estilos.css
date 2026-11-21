@@ -84,3 +84,26 @@ header{
     text-align: center;
     min-height: calc(100vh - 250px);
 }
+/* MENU PRINCIPAL SIGEA */
+nav {
+    background-color: #1e293b;
+    padding: 15px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #3b82f6;
+    color: #ffffff;
+}

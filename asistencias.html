@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Asistencias - SIGEA</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/bot.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <h1>
+        <i class="fa-solid fa-calendar-check"></i>
+        Gestión de Asistencias
+    </h1>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="login.html">Usuario</a>
+        <a href="alumnos.html">Alumnos</a>
+        <a href="docentes.html">Docentes</a>
+        <a href="materias.html">Materias</a>
+        <a href="curso.html">Curso</a>
+        <a href="calificaciones.html">Calificaciones</a>
+        <a href="asistencias.html">Asistencias</a>
+        <a href="reportes.html">Reportes</a>
+    </nav>
+</header>
+
+<main>
+
+    <section>
+        <h2>Registrar Asistencia</h2>
+
+        <form id="formAsistencia">
+
+            <label for="alumnoAsistencia">Alumno:</label>
+            <select id="alumnoAsistencia" required>
+                <option value="">Seleccionar alumno</option>
+            </select>
+
+            <label for="fechaAsistencia">Fecha:</label>
+            <input type="date" id="fechaAsistencia" required>
+
+            <label for="estadoAsistencia">Estado:</label>
+            <select id="estadoAsistencia" required>
+                <option value="">Seleccionar estado</option>
+                <option value="Presente">Presente</option>
+                <option value="Ausente">Ausente</option>
+                <option value="Justificado">Justificado</option>
+            </select>
+
+            <label for="observacionesAsistencia">Observaciones:</label>
+            <textarea
+                id="observacionesAsistencia"
+                placeholder="Ingrese observaciones..."
+            ></textarea>
+
+            <button type="submit">Guardar</button>
+            <button type="button" id="btnModificarAsistencia">Modificar</button>
+            <button type="button" id="btnEliminarAsistencia">Eliminar</button>
+            <button type="button" id="btnLimpiarAsistencia">Limpiar</button>
+
+        </form>
+    </section>
+
+    <section>
+        <h2>Listado de Asistencias</h2>
+        <ul id="listaAsistencias"></ul>
+    </section>
+
+</main>
+
+<script src="js/app.js"></script>
+<script src="js/bot.js"></script>
+
+</body>
+</html>

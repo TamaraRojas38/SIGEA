@@ -1,0 +1,20 @@
+/* Estilos independientes del asistente virtual SIGEA */
+#sigea-bot-launcher{position:fixed;right:24px;bottom:24px;z-index:9998;width:62px;height:62px;border:0;border-radius:50%;background:#7d194f;color:#fff;font-size:27px;cursor:pointer;box-shadow:0 5px 18px #0004}
+#sigea-bot-launcher:hover{background:#64123e}
+#sigea-bot{position:fixed;right:24px;bottom:98px;z-index:9999;display:none;flex-direction:column;width:min(360px,calc(100vw - 32px));height:min(510px,calc(100vh - 130px));background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 8px 30px #0004;border:1px solid #e6e6e6;font-family:Arial,sans-serif}
+#sigea-bot.sigea-bot-open{display:flex}
+.sigea-bot-header{background:#7d194f;color:#fff;padding:15px 16px;display:flex;align-items:center;justify-content:space-between}
+.sigea-bot-header strong{display:block;font-size:16px}.sigea-bot-header small{opacity:.9}
+#sigea-bot-close{border:0;background:transparent;color:#fff;font-size:24px;cursor:pointer}
+#sigea-bot-messages{flex:1;padding:14px;overflow-y:auto;background:#f6f6f8}
+.sigea-message{max-width:88%;padding:10px 12px;margin:0 0 10px;border-radius:12px;line-height:1.4;font-size:14px;overflow-wrap:anywhere;white-space:pre-wrap}
+.sigea-message-bot{background:#fff;color:#222;border:1px solid #e8e8e8;border-bottom-left-radius:4px}
+.sigea-message-user{background:#7d194f;color:#fff;margin-left:auto;border-bottom-right-radius:4px}
+.sigea-bot-quick{display:flex;flex-wrap:wrap;gap:7px;margin-top:8px}
+.sigea-bot-quick button{border:1px solid #7d194f;color:#7d194f;background:#fff;border-radius:18px;padding:7px 10px;cursor:pointer;font-size:12px}
+.sigea-bot-quick button:hover{background:#f8eaf1}
+.sigea-bot-form{display:flex;gap:8px;padding:11px;border-top:1px solid #eee;background:#fff}
+#sigea-bot-input{min-width:0;flex:1;border:1px solid #ccc;border-radius:20px;padding:10px 12px;font-size:14px}
+#sigea-bot-send{border:0;border-radius:20px;padding:0 15px;background:#7d194f;color:#fff;cursor:pointer}
+#sigea-bot-launcher:focus-visible,#sigea-bot-close:focus-visible,.sigea-bot-quick button:focus-visible{outline:3px solid #e6a9c8;outline-offset:2px}
+@media(max-width:480px){#sigea-bot-launcher{right:16px;bottom:16px}#sigea-bot{right:8px;bottom:88px;width:calc(100vw - 16px)}}

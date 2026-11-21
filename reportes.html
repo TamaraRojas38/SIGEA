@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGEA - Reportes Académicos</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/bot.css">
+    <style>
+        .contenedor-reportes {
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        .tarjetas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+            gap: 15px;
+            margin: 25px 0;
+        }
+
+        .tarjeta {
+            padding: 20px;
+            border-radius: 10px;
+            background: #eaf1f8;
+            text-align: center;
+        }
+
+        .tarjeta h3 {
+            margin: 0 0 10px;
+        }
+
+        .tarjeta p {
+            font-size: 28px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .seccion-reporte {
+            margin-top: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+
+        .tabla-reporte {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        .tabla-reporte th,
+        .tabla-reporte td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .tabla-reporte th {
+            background: #eaf1f8;
+        }
+
+        .acciones {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        @media print {
+            button, a, .acciones {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html">Inicio</a>
+    <a href="login.html">Usuario</a>
+    <a href="alumnos.html">Alumnos</a>
+    <a href="docentes.html">Docentes</a>
+    <a href="materias.html">Materias</a>
+    <a href="curso.html">Curso</a>
+    <a href="calificaciones.html">Calificaciones</a>
+    <a href="asistencias.html">Asistencias</a>
+    <a href="reportes.html">Reportes</a>
+</nav>
+    <main class="contenedor-reportes">
+        <h1>Reportes Académicos</h1>
+        <p>Sistema de Gestión Escolar Académica - SIGEA</p>
+
+        <div class="tarjetas">
+            <div class="tarjeta">
+                <h3>Total de alumnos</h3>
+                <p id="totalAlumnos">0</p>
+            </div>
+
+            <div class="tarjeta">
+                <h3>Total de docentes</h3>
+                <p id="totalDocentes">0</p>
+            </div>
+
+            <div class="tarjeta">
+                <h3>Total de materias</h3>
+                <p id="totalMaterias">0</p>
+            </div>
+
+            <div class="tarjeta">
+                <h3>Total de cursos</h3>
+                <p id="totalCursos">0</p>
+            </div>
+        </div>
+
+        <section class="seccion-reporte">
+            <h2>Listado de alumnos</h2>
+
+            <label for="filtroCurso">Filtrar por curso:</label>
+            <select id="filtroCurso">
+                <option value="">Todos los cursos</option>
+            </select>
+
+            <table class="tabla-reporte">
+                <thead>
+                    <tr>
+                        <th>Alumno</th>
+                        <th>DNI</th>
+                        <th>Curso</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaAlumnos"></tbody>
+            </table>
+        </section>
+
+        <section class="seccion-reporte">
+            <h2>Resumen de asistencias</h2>
+            <div class="tarjetas">
+                <div class="tarjeta">
+                    <h3>Presentes</h3>
+                    <p id="totalPresentes">0</p>
+                </div>
+                <div class="tarjeta">
+                    <h3>Ausentes</h3>
+                    <p id="totalAusentes">0</p>
+                </div>
+                <div class="tarjeta">
+                    <h3>Justificadas</h3>
+                    <p id="totalJustificadas">0</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion-reporte">
+            <h2>Promedios de calificaciones</h2>
+            <table class="tabla-reporte">
+                <thead>
+                    <tr>
+                        <th>Alumno</th>
+                        <th>Materia</th>
+                        <th>Calificación</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaCalificaciones"></tbody>
+            </table>
+        </section>
+
+        <div class="acciones">
+            <button type="button" onclick="window.print()">Imprimir reportes</button>
+            <a href="index.html">Volver al inicio</a>
+        </div>
+    </main>
+
+    <script src="js/reportes.js"></script>
+    <script src="js/bot.js"></script>
+
+</body>
+</html>

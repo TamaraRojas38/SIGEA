@@ -1,9 +1,13 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Gestión de Cursos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Cursos - SIGEA</title>
+
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/bot.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
@@ -13,39 +17,50 @@
         <i class="fa-solid fa-users-between-lines"></i>
         Gestión de Cursos
     </h1>
+
     <nav>
-        <a href="index.html">Inicio</a>
-        <a href="login.html">Usuario</a>
-        <a href="alumnos.html">Alumnos</a>
-        <a href="docentes.html">Docentes</a>
-        <a href="materias.html">Materias</a>
-        <a href="curso.html">Curso</a>
-        <a href="calificaciones.html">Calificaciones</a>
-    
-        
-    </nav>
+    <a href="index.html">Inicio</a>
+    <a href="login.html">Usuario</a>
+    <a href="alumnos.html">Alumnos</a>
+    <a href="docentes.html">Docentes</a>
+    <a href="materias.html">Materias</a>
+    <a href="curso.html">Curso</a>
+    <a href="calificaciones.html">Calificaciones</a>
+    <a href="asistencias.html">Asistencias</a>
+    <a href="reportes.html">Reportes</a>
+</nav>
 </header>
 
 <main>
+
     <section>
+        <h2>Registrar Curso</h2>
 
-<h2>Registrar Curso</h2>
+        <form id="formCurso">
 
-<form>
-    <label>Curso:</label>
-    <input type="text">
+            <label for="nombreCurso">Curso:</label>
+            <input type="text" id="nombreCurso" placeholder="Ej: 1° Año" required>
 
-    <label>Division:</label>
-    <input type="text">
+            <label for="divisionCurso">División:</label>
+            <input type="text" id="divisionCurso" placeholder="Ej: A" required>
 
+            <button type="submit">Guardar</button>
+            <button type="button" id="btnModificarCurso">Modificar</button>
+            <button type="button" id="btnEliminarCurso">Eliminar</button>
+            <button type="button" id="btnLimpiarCurso">Limpiar</button>
 
-    <button type="submit">Guardar</button>
-    <button type="submit">Modificar</button>
-    <button type="submit">Eliminar</button>
-</form>
+        </form>
+    </section>
 
-</section>
+    <section>
+        <h2>Listado de Cursos</h2>
+        <ul id="listaCursos"></ul>
+    </section>
+
 </main>
+
+<script src="js/app.js"></script>
+<script src="js/bot.js"></script>
 
 </body>
 </html>
